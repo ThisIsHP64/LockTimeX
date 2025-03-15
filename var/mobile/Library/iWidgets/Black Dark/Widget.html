@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Widget</title>
+
+    <style>
+        /* Time font (time.ttf) */
+        @font-face {
+            font-family: 'Time';
+            src: url('time.ttf') format('truetype');
+        }
+
+        /* Date font (datetext.otf) */
+        @font-face {
+            font-family: 'DateText';
+            src: url('datetext.otf') format('opentype');
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: transparent;
+            color: white;
+            font-family: 'DateText', sans-serif;
+        }
+
+        #time {
+            font-size: 80px;
+            font-family: 'Time', sans-serif;
+            color: black;
+            text-align: center;
+            margin-top: 60px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #date {
+            font-size: 20px;
+            font-family: 'DateText', sans-serif;
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 30px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body onload="startTime()">
+    <div id="date"></div>
+    <div id="time"></div>
+
+    <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+
+            m = m < 10 ? "0" + m : m;
+            h = h > 12 ? h - 12 : h === 0 ? 12 : h;
+
+            document.getElementById('time').innerHTML = h + ':' + m;
+            updateDate(today);
+            setTimeout(startTime, 60000);
+        }
+
+        function updateDate(today) {
+            const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            const day = dayNames[today.getDay()];
+            const month = monthNames[today.getMonth()];
+            const date = today.getDate();
+
+            document.getElementById('date').innerHTML = day + ", " + month + " " + date;
+        }
+    </script>
+</body>
+</html>
