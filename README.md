@@ -3,7 +3,7 @@ Bring iOS 16+ Lock Screen Clock to older devices.
 
 Features:
 1. Different Clock Styles: Stencil, Rail, Rounded and Black.
-2. Includes Dark Mode-themed Styles to match your style!
+2. Includes Dark Mode-themed clocks to match your style!
 ![go light dark amte](https://github.com/user-attachments/assets/08e87aa9-911e-45f8-b3b7-f973d6bbde78)
 
 Compatibility: 
