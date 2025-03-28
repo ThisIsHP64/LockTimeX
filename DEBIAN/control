@@ -1,8 +1,8 @@
-Package: com.ivintagelover.lockscreen16
-Name: LockScreen16
-Version: 1.0
+Package: com.ivintagelover.locktimex
+Name: LockTimeX
+Version: 1.2
 Section: Tweaks
 Architecture: iphoneos-arm
 Author: iVintageLover
 Maintainer: iVintageLover
-Description: iOS 16 Lock Screen clock for older iDevices. Apple using XEN HTML. Supports iPhone, iPad and iPod touch running iOS 9.0 and later
+Description: iOS 16 Lock Screen clock for older iDevices. Apply using Xen HTML. Supports iPhone, iPad and iPod touch running iOS 9.0 and later.
